@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { TypographyProps } from './model/types';
+import { TypographyProps } from '.';
 
 export const StyledTypography = styled('div')<TypographyProps>`
   color: ${({ theme }) => theme.primary.contrastText};
@@ -62,7 +62,9 @@ export const StyledTypography = styled('div')<TypographyProps>`
           font-weight: ${theme.typography.body7.fontWeight};
         `;
       default:
-        return '';
+        return `
+          display: none;
+        `;
     }
   }};
 `;

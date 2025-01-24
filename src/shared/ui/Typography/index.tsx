@@ -1,12 +1,11 @@
-import { typographyList } from './model/data';
 import { StyledTypography } from './styled';
 
 export interface TypographyProps {
-  variant: keyof typeof typographyList.typography;
+  variant: keyof typeof tagMapping;
   children: React.ReactNode;
 }
 
-export const tagMapping: Record<string, keyof JSX.IntrinsicElements> = {
+const tagMapping: Record<string, keyof JSX.IntrinsicElements> = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
