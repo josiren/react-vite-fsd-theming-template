@@ -5,12 +5,12 @@ import { NavBar } from '@/widgets';
 
 export const MainLayout = () => {
   return (
-    <>
+    <main>
       <StyledMainLayout>
         <NavBar />
         <Typography variant="h1">Example</Typography>
         <Outlet />
       </StyledMainLayout>
-    </>
+    </main>
   );
 };
