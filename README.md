@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# 🔄 Развертывание
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Клонирование репозитория
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone https://github.com/josiren/react-vite-fsd-theming-template.git
+cd react-vite-fsd-theming-template
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Установка Bun (если еще не установлен)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
 ```
+curl -fsSL https://bun.sh/install | bash
+```
+
+## Установка зависимостей
+
+```
+bun install
+```
+
+## Запуск в режиме разработки
+
+```
+bunx --bun vite
+```
+
+## Сборка проекта
+
+```
+bun build
+```
+
+## Линтинг кода
+
+```
+bun lint
+```
+
+## Форматирование кода (prettier)
+
+```
+bun format
+```
+
+## Предварительный просмотр сборки
+
+```
+bun preview
+```
+
+# 🚀 Ключевые особенности
+
+- **Технологический стек**:
+
+  - **React**: Используется для создания пользовательского интерфейса.
+  - **Vite**: Современный инструмент сборки для быстрой разработки и высокой производительности.
+  - **Redux**: Управление состоянием приложения.
+
+- **Feature-Sliced Design (FSD)**:
+
+  - Структура проекта организована по методологии FSD, что обеспечивает четкое разделение
+    функциональности на независимые модули или "фичи".
+  - Упрощает масштабирование и поддержку кода.
+
+- **Темизация**:
+
+  - Поддержка светлой и темной тем.
+  - Реализована через **ThemeProvider** из **@emotion/styled**, что упрощает управление глобальными
+    стилями.
+  - Позволяет адаптировать внешний вид приложения к предпочтениям пользователя.
+
+- **Стилизация компонентов**:
+
+  - Использование **@emotion/styled** для создания стилизованных компонентов с поддержкой CSS-in-JS.
+  - Возможность динамического изменения стилей в зависимости от состояния приложения.
+
+- **Гибкость и расширяемость**:
+
+  - Легкое управление темизацией.
+  - Идеально подходит как для обучения, так и для создания коммерческих приложений.
