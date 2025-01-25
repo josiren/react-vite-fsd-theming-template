@@ -1,5 +1,3 @@
-import { typography } from './typography';
-
 export const lightTheme = {
   primary: {
     main: '#F6F6F6',
@@ -13,5 +11,4 @@ export const lightTheme = {
     greyscale: '#EFEFEF',
     light: '#FFFFFF',
   },
-  typography,
 };
