@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
 import { useAppSelector } from './model';
 import { darkTheme, lightTheme } from '@/shared';
-import { MainLayout } from './ui';
+import { MainLayout } from './layouts';
 
 function App() {
   const theme = useAppSelector(state => state.themeReducer.theme);
