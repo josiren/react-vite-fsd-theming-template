@@ -5,7 +5,7 @@ import { darkTheme, lightTheme } from './styles';
 import { MainLayout } from './ui';
 
 function App() {
-  const theme = useAppSelector(state => state.theme);
+  const theme = useAppSelector(state => state.themeReducer.theme);
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <BrowserRouter>

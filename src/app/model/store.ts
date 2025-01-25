@@ -3,7 +3,9 @@ import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import themeReducer from '@/features/NavBar/ui/ThemeSwitcher/model/slice';
 
 export const store = configureStore({
-  reducer: themeReducer,
+  reducer: {
+    themeReducer: themeReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
