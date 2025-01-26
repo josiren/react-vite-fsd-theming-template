@@ -1,8 +1,11 @@
 import '@emotion/react';
 
 interface TypographyStyle {
-  fontSize: string;
-  fontWeight: string;
+  fontFamily?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  fontLetterSpacing?: string;
+  fontLineHeight?: string;
 }
 
 declare module '@emotion/react' {
